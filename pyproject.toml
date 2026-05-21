@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "audittrace-object-storage"
-version = "0.1.0"
+version = "0.1.1"
 description = "Object-storage provider abstraction shared by AuditTrace-AI and audittrace-content-control. MinIO + AWS S3 backends, IRSA-native auth, per-file 90%+ coverage gate."
 readme = "README.md"
 requires-python = ">=3.12"
@@ -45,6 +45,9 @@ Issues = "https://github.com/lfdesousa/audittrace-object-storage/issues"
 [tool.setuptools.packages.find]
 where = ["src"]
 namespaces = false
+
+[tool.setuptools.package-data]
+"audittrace_object_storage" = ["py.typed"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
